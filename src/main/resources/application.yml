@@ -2,7 +2,7 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://192.168.132.130:31331
+      uri: mongodb://192.168.132.128:31331
       database: demo
 
 server:
