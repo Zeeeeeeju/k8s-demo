@@ -8,6 +8,7 @@ spec:
   type: NodePort
   ports:
     - port: 8999
+      targetPort: 8999
       nodePort: 30090
   selector:
     app: k8s-springboot-demo
