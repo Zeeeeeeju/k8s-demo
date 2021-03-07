@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: k8s-springboot-demo
-          image: zzeju/k8s-springboot-demo
+          image: zzeju/k8s-springboot-demo:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8999
