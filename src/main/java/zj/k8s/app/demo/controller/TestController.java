@@ -24,6 +24,7 @@ public class TestController {
 
     @GetMapping("/alive")
     public String isAlive() throws Exception {
+        System.out.println(System.currentTimeMillis() + "Check alive");
         if (!Alive.alive) {
             throw new Exception("System error");
         }
