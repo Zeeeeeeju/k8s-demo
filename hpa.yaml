@@ -1,12 +1,12 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: k8s-springboot-demo
+  name: k8s-springboot-demo-hpa
 spec:
   minReplicas: 1
   maxReplicas: 3
   scaleTargetRef:
-    apiVersion: extensions/v1beta1
+    apiVersion: apps/v1
     kind: Deployment
     name: k8s-springboot-demo
   metrics:
