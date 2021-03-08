@@ -5,6 +5,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import zj.k8s.app.demo.entity.Alive;
 import zj.k8s.app.demo.entity.User;
 
 import java.util.List;
@@ -19,6 +20,20 @@ public class TestController {
     @GetMapping
     public List<User> get() {
         return mongoTemplate.findAll(User.class);
+    }
+
+    @GetMapping("/alive")
+    public String isAlive() throws Exception {
+        if (!Alive.alive) {
+            throw new Exception("System error");
+        }
+        return "OK";
+    }
+
+    @GetMapping("/modify")
+    public String modifyAlive() {
+        Alive.alive = !Alive.alive;
+        return "OK";
     }
 
 }
