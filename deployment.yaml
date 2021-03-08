@@ -35,9 +35,6 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8999
-          resources:
-            limits:
-              cpu: 1000m
           livenessProbe:
             initialDelaySeconds: 60
             periodSeconds: 60
