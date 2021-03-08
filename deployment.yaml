@@ -35,3 +35,11 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8999
+          livenessProbe:
+            initialDelaySeconds: 20
+            periodSeconds: 5
+            timeoutSeconds: 10
+            httpGet:
+              scheme: HTTP
+              port: 8999
+              path: /test/alive
