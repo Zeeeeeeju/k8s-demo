@@ -1,19 +1,16 @@
-apiVersion: autoscaling/v2beta2
+apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
   name: k8s-springboot-demo
-
 spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: k8s-springboot-demo
   minReplicas: 1
   maxReplicas: 3
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
+    kind: Deployment
+    name: k8s-springboot-demo
   metrics:
     - type: Resource
       resource:
         name: cpu
-        target:
-          type: AverageValue
-          averageValue: 200mi
+        targetAverageValue: 200m
