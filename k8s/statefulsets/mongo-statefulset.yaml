@@ -19,8 +19,6 @@ spec:
           image: mongo
           command:
             - mongod
-            - "--dbpath"
-            - /data/db
             - "--bind_ip"
             - 0.0.0.0
             - "--replSet"
