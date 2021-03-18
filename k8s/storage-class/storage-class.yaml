@@ -4,4 +4,5 @@ metadata:
   name: statefu-nfs
   namespace: nfs
 provisioner: zeju-provisioner
-reclaimPolicy: Retain
+parameters:
+  archiveOnDelete:  "true"

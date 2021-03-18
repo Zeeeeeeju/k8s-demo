@@ -2,8 +2,10 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://192.168.132.128:31331
       database: demo
+      host: 192.168.132.128
+      port: 31331
+#      replica-set-name: rs0
 
 server:
   port: 8999
