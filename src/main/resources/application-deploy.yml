@@ -2,8 +2,9 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://${MONGO_SERVICE_HOST}:${MONGO_SERVICE_SERVICE_PORT}
       database: demo
+      host: ${MONGO_SERVICE_HOST}
+      port: ${MONGO_SERVICE_SERVICE_PORT}
 
 server:
   port: 8999
