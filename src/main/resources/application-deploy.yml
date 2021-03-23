@@ -5,6 +5,7 @@ spring:
       database: demo
       host: ${MONGO_SERVICE_HOST}
       port: ${MONGO_SERVICE_SERVICE_PORT}
+      replica-set-name: rs0
 
 server:
   port: 8999
