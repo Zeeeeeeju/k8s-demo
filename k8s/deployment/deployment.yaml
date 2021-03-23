@@ -38,9 +38,17 @@ spec:
           livenessProbe:
             initialDelaySeconds: 60
             periodSeconds: 60
-            timeoutSeconds: 10
+            timeoutSeconds: 1
             failureThreshold: 1
             httpGet:
               scheme: HTTP
               port: 8999
               path: /test/alive
+          readinessProbe:
+            periodSeconds: 5
+            initialDelaySeconds: 1
+            timeoutSeconds: 1
+            httpGet:
+              port: 8999
+              path: /test/alive
+

@@ -27,7 +27,7 @@ public class TestController {
     void add() {
         User user = new User();
         user.setId(String.valueOf(System.currentTimeMillis()));
-        user.setName("Zzeju");
+        user.setName("Zeju");
 
         mongoTemplate.insert(user);
     }
