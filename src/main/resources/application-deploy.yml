@@ -2,10 +2,7 @@
 spring:
   data:
     mongodb:
-      database: demo
-      host: ${MONGO_SERVICE_HOST}
-      port: ${MONGO_SERVICE_SERVICE_PORT}
-      replica-set-name: rs0
+      uri: mongodb://${MONGO_SERVICE_HOST}:${MONGO_SERVICE_SERVICE_PORT}/demo?replicaSet=rs0&write=1&readPreference=secondaryPreferred
 
 server:
   port: 8999
