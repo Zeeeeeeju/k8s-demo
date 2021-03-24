@@ -29,6 +29,15 @@ spec:
       labels:
         app: k8s-springboot-demo
     spec:
+      tolerations:
+        - key: "node.kubernetes.io/unreachable"
+          operator: "Exists"
+          effect: "NoExecute"
+          tolerationSeconds: 10
+        - key: "node.kubernetes.io/not-ready"
+          operator: "Exists"
+          effect: "NoExecute"
+          tolerationSeconds: 10
       containers:
         - name: k8s-springboot-demo
           image: zzeju/k8s-springboot-demo:latest
