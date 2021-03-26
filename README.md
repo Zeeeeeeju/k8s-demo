@@ -9,10 +9,14 @@
 
 2. Setup mongodb cluster by StatefulSet
     * Statefulset
-    * Pod env
+    * NFS
+    * PV
+    * PVC
+    * StorageClass
 3. Setup an app with step 2 DB by Service And Deployment   
     * Deployment
     * Service
+    * Pod env
 4. Simulate a case for auto recovering     
     * LivenessProbe
     * ReadinessProbe
@@ -23,3 +27,4 @@
     * JMeter
 
 6. Setup a dashboard for monitor
+   * Kubernetes Dashboard
